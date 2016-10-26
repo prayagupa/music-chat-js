@@ -107,7 +107,7 @@ export class ChatMessage implements OnInit {
     </div>
   `
 })
-export class ChatWindow implements OnInit {
+export class ChatComponent implements OnInit {
   messages: Observable<any>;
   currentThread: Thread;
   draftMessage: Message;

@@ -19,15 +19,15 @@ import {
 /*
  * Components
  */
-import {ChatNavBar} from './components/ChatNavBar';
+import {NavigationBarComponent} from './components/NavigationBarComponent';
 import {
-  ChatThreads,
-  ChatThread
-  } from './components/ChatThreads';
+  ChatThreadsComponent,
+  ChatThreadComponent
+  } from './components/ChatThreadsComponents';
 import {
-  ChatWindow,
+  ChatComponent,
   ChatMessage
-  } from './components/ChatWindow';
+  } from './components/ChatComponent';
 
 /*
  * Injectables
@@ -44,7 +44,7 @@ import {
   UserService
 } from './services/services';
 
-import {ChatExampleData} from './ChatExampleData';
+import {ChatDataCollection} from './ChatDataCollection';
 
 /*
  * Webpack
@@ -67,17 +67,17 @@ class ChatApp {
   constructor(public messagesService: MessagesService,
               public threadsService: ThreadsService,
               public userService: UserService) {
-    ChatExampleData.init(messagesService, threadsService, userService);
+    ChatDataCollection.init(messagesService, threadsService, userService);
   }
 }
 
 @NgModule({
   declarations: [
     ChatApp,
-    ChatNavBar,
-    ChatThreads,
-    ChatThread,
-    ChatWindow,
+    NavigationBarComponent,
+    ChatThreadsComponent,
+    ChatThreadComponent,
+    ChatComponent,
     ChatMessage,
     utilInjectables
   ],
@@ -97,9 +97,9 @@ platformBrowserDynamic().bootstrapModule(ChatAppModule);
 // They're currently required to get watch-reloading
 // from webpack, but removing them is a TODO
 require('./services/services');
-require('./ChatExampleData');
+require('./ChatDataCollection');
 require('./util/util');
-require('./components/ChatNavBar');
-require('./components/ChatWindow');
-require('./components/ChatThreads');
+require('./components/NavigationBarComponent');
+require('./components/ChatComponent');
+require('./components/ChatThreadsComponents');
 

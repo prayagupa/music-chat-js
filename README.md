@@ -5,5 +5,5 @@ Music chat
 ```
 npm install
 
-npm run go
+npm run frontend
 ```

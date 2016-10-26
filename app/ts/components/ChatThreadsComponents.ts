@@ -26,7 +26,7 @@ import {Thread} from '../models';
   </div>
   `
 })
-export class ChatThread implements OnInit {
+export class ChatThreadComponent implements OnInit {
   thread: Thread;
   selected: boolean = false;
 
@@ -66,7 +66,7 @@ export class ChatThread implements OnInit {
     </div>
   `
 })
-export class ChatThreads {
+export class ChatThreadsComponent {
   threads: Observable<any>;
 
   constructor(public threadsService: ThreadsService) {

@@ -4,7 +4,7 @@
   "description": "Chat App with Angular 2 and RxJS",
   "main": "index.js",
   "scripts": {
-    "go": "./node_modules/.bin/webpack-dev-server --display-reasons --display-chunks",
+    "frontend": "./node_modules/.bin/webpack-dev-server --display-reasons --display-chunks",
     "clean": "true",
     "test": "karma start --single-run"
   },
